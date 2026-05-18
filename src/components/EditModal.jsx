@@ -27,7 +27,7 @@ export function EditModal({ destination }) {
     }
     return (
         <Modal>
-            <Button variant="outline" className={'rounded-none mt-5 mb-3'}><BiEdit /> Edit</Button>
+            <Button variant="outline" className={'rounded-none'}><BiEdit /> Edit</Button>
             <Modal.Backdrop>
                 <Modal.Container placement="auto">
                     <Modal.Dialog className="sm:max-w-xl">
