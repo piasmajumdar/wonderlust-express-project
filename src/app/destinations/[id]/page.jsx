@@ -1,6 +1,8 @@
+import { Button } from "@heroui/react";
 import { descriptionVariants } from "@heroui/styles";
 import Image from "next/image";
 import Link from "next/link";
+import { BiEdit } from "react-icons/bi";
 import { FaRegCalendar } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
 
@@ -15,13 +17,18 @@ const DestinationDetailsPage = async ({ params }) => {
     // console.log(destination)
     return (
         <div className="max-w-7xl mx-auto my-10">
+
+           <div className="flex justify-end">
+            <Button variant="outline"  className={'rounded-none mt-5 mb-3'}><BiEdit/> Edit</Button>
+           </div>
+
             <figure className=''>
                 <Image
                     alt={destinationName}
                     src={imageUrl}
                     height={200}
                     width={600}
-                    className='h-[400px] w-auto mx-auto rounded-md'>
+                    className='h-100 w-full object-cover rounded-md'>
                 </Image>
             </figure>
 
