@@ -1,3 +1,4 @@
+import { EditModal } from "@/components/EditModal";
 import { Button } from "@heroui/react";
 import { descriptionVariants } from "@heroui/styles";
 import Image from "next/image";
@@ -18,9 +19,9 @@ const DestinationDetailsPage = async ({ params }) => {
     return (
         <div className="max-w-7xl mx-auto my-10">
 
-           <div className="flex justify-end">
-            <Button variant="outline"  className={'rounded-none mt-5 mb-3'}><BiEdit/> Edit</Button>
-           </div>
+            <div className="flex justify-end">
+                <EditModal destination={destination}></EditModal>
+            </div>
 
             <figure className=''>
                 <Image
