@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import UserProfileNav from './UserProfileNav';
 
-const Navbar = () => {
+
+const Navbar = async () => {
+
+
     return (
         <div className='flex justify-between bg-white p-5'>
             <ul className='flex gap-3'>
@@ -15,13 +19,8 @@ const Navbar = () => {
             <div>
                 <Image src={'/assets/Wanderlast.png'} alt='nav' height={150} width={150}></Image>
             </div>
-            
-            <ul className='flex gap-3'>
-                <li><Link href={'/profile'}>Profie</Link></li>
-                <li><Link href={'/login'}>Login</Link></li>
-                <li><Link href={'/signup'}>Sign Up</Link></li>
-            </ul>
-            
+            <UserProfileNav></UserProfileNav>
+
         </div>
     );
 };
