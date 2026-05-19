@@ -12,7 +12,11 @@ const DestinationDetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(id)
 
-    const res = await fetch(`http://localhost:5000/destination/${id}`)
+    const res = await fetch(`http://localhost:5000/destination/${id}`, {
+        headers: {
+            authorization: "logged in"
+        }
+    })
     const destination = await res.json();
     const { _id, imageUrl, price, destinationName, duration, country, description } = destination;
 

@@ -1,6 +1,6 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
-import { Button } from '@heroui/react';
+import { Button, Separator } from '@heroui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -62,6 +62,12 @@ const LoginPage = () => {
                     <FcGoogle></FcGoogle>
                     Login with Google
                 </Button>
+
+                <div className='flex items-center w-full'>
+                    <Separator className='flex-1'/>
+                    <div className='whitespace-nowrap'>Or login with Email</div>
+                    <Separator className='flex-1'/>
+                </div>
                 <form onSubmit={handleSubmit(handleLogin)} className='space-y-2'>
 
 
