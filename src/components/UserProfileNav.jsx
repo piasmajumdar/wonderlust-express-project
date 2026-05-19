@@ -66,7 +66,7 @@ const UserProfileNav = () => {
                             </Dropdown.Popover>
                         </Dropdown>
 
-                        <Button onClick={async () => await authClient.signOut()} type="submit" variant='danger'>Logout</Button>
+                        <Button size='sm' onClick={async () => await authClient.signOut()} type="submit" variant='danger'>Logout</Button>
 
                     </ul>
                     :
